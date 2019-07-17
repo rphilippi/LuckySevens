@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Lucky Sevens</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="styles/LuckySevens.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container"> <!-- global container-->
+      <h1>Lucky Sevens</h1>
+
+      <table class=table>
+        <form name="startingBet" onsubmit="return validateItems();" class="form-inline">
+
+            <table class="table" id="playTable">
+              <tbody>
+              <tr>
+                <div class="form-group">
+                <td><label for="betValue">Starting Bet:</label></td>
+                <td><input type="number" class="form-control" id="betValue" placeholder="$0.00"></td>
+                </div>
+
+              <tr>
+                <td colspan="2">
+                <button type="play" id="submitButton" class="btn btn-primary btn-lg btn-block">Play</button>
+                </td>
+              </tr>
+
+              </tbody>
+            </table>
+        </form>
+          <table class="table table-striped table-hover" id="results" style="display:none;">
+            <thead>
+              <tr>
+                <th><h2>Results</h2></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Starting Bet</td>
+                <td><span id="resultsBet"></span>
+              </tr>
+
+              <tr>
+                <td>Total Rolls Before Going Broke</td>
+                <td><span id="resultsTotalRolls"></span>
+              </tr>
+
+              <tr>
+                <td>Highest Amount Won</td>
+                <td><span id="resultsHighAmount"></span>
+              </tr>
+
+              <tr>
+                <td>Roll Count at Highest Amount Won</td>
+                <td><span id="resultsRollsAtHigh"></span>
+              </tr>
+
+
+            </tbody>
+          </table>
+
+    </div> <!-- global container-->
+  <script type="text/JavaScript" src="scripts/LuckySevens.js"></script>
+  </body>
+</html>
