@@ -46,9 +46,9 @@ function validateItems() {
 
     document.getElementById("results").style.display = "block";
     document.getElementById("submitButton").innerText = "Play Again?";
-    document.getElementById("resultsBet").innerText = firstBet;
+    document.getElementById("resultsBet").innerText = ("$" + firstBet);
     document.getElementById("resultsTotalRolls").innerText = rollCounter;
-    document.getElementById("resultsHighAmount").innerText = highBank;
+    document.getElementById("resultsHighAmount").innerText = ("$" + highBank);
     document.getElementById("resultsRollsAtHigh").innerText = rollAtHighBank;
     return false;
 }
